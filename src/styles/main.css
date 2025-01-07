@@ -1,129 +1,55 @@
-body {
-    background-color: rgb(0, 0, 0);
-    
+main {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-image: url(../images/download.jpeg);
 }
 
-.hub {
-    background-color: rgb(169, 98, 98);
+.menu {
     display: flex;
-    width: 100vw;
-    height: 10vh;
-    font-size: 2vh;
+    justify-content: space-evenly;
+    align-items: center;
 
-    & .score {
-        width: calc(100vw/3);
-        text-align: center;
-    }
-
-    & .lives {
-        width: calc(100vw/3);
-        text-align: center;
-        /* background-color: blueviolet; */
-        
-        & img {
-            height: 3vh;
-        }
-    }
+    height: 90px;
+    width: 100%;
+    background-color: #000000;
+    color: #ffffff;
+    border-bottom: 5px solid #ffd700;
 }
 
-.building {
-    position: relative;
+.panel {
+    margin-top: 1rem;
     display: flex;
-    height: 90vh;
-    align-items: end;
-    opacity: 1;
+    align-items: center;
     justify-content: center;
 
-    & img {
-        width: calc(1.19 * 38.281vw);
-        height: calc(1.19 * 75.6vh);
-    }
-
-    & .windows {
-        position: absolute;
-        top: 0;
-        /* background-color: #aa48486a; */
-        width: calc(1.19 * 38.281vw);
-        height: calc(1.19 * 75.6vh);
-    }
 }
 
-.row1, .row2, .row3 {
+.square {
+    height: 150px;
+    width: 150px;
+    border: 1px solid #000000;
+    background-color: #7fffd4;
+}
+
+.enemy {
+    background-image: url(../images/ralph.gif);
+    background-size: cover;
+}
+
+.menu-lives {
     display: flex;
-    opacity: 1;
-    margin-left: 6.8vw;
-
-    & .window:nth-child(1), .window:nth-child(4), .window:nth-child(5) {
-        margin-right: 4.3vw;
-        width: calc(1.19 * 2.188vw);
-        height: calc(1.19 * 8.1vh);
-
-        & img {
-            width: 100%;
-            height: 100%;
-        }
-    }
-
-    & .window:nth-child(2), .window:nth-child(3){
-        margin-right: 5.2vw;
-        width: calc(1.19 * 2.188vw);
-        height: calc(1.19 * 8.1vh);
-
-        & img {
-            width: 100%;
-            height: 100%;
-        }
-    }
+    align-items: center;
+    justify-content: center;
 }
 
-.row1 {
-    top: 0vh;
-    margin-top: 28.3vh;
-    margin-bottom: 13.7vh;
+
+.menu-time h2:nth-child(1),
+.menu-score h2:nth-child(1) {
+    color: #ff0000;
 }
 
-.row2 {
-    top: 10vh;
-    margin-bottom: 10.4vh;
-}
-
-.row3 {
-    top: 20vh;
-}
-
-.ralph {
-    position: absolute;
-    top: 1.5vh;
-    
-    & img {
-        width: 8.854vw;
-        height: 18.5vh;
-    }
-}
-
-.color-red {
-    color: #f00;
-}
-
-.hidden {
-    visibility: hidden;
-}
-
-.white-box {
-    position: relative;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    transform: scale(1.2);
-    background-color: #ffffff;
-}
-
-.blue-box {
-    position: relative;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    margin-top: 5.5vh;
-    transform: scale3d(2, 1, 1);
-    background-color: #486DAA;
+.menu-time h2:nth-child(2),
+.menu-score h2:nth-child(2) {
+    margin-top: 1rem;
 }
