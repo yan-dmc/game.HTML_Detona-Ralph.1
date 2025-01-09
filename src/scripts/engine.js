@@ -18,15 +18,24 @@ const state = {
     }
 };
 
-function playSound(audioName, repeat, volume){
-    let audio = new Audio(`./src/audios/FixItFelix-SFX/FELIX-${audioName}.wav`);
+function playSound(audioName, repeat, volume) {
+    const audio = new Audio(`./src/audios/FixItFelix-SFX/FELIX-${audioName}.wav`);
     audio.volume = volume;
-    audio.play();
-
     if (repeat === "repeat") {
         audio.loop = true;
     }
+    audio.play();
 }
+
+// Inicializa som de fundo após a interação
+document.addEventListener("DOMContentLoaded", () => {
+    const initSound = () => {
+        playSound(26, "repeat", 0.5); 
+        document.removeEventListener("click", initSound); 
+    };
+    document.addEventListener("click", initSound);
+});
+
 
 function formatCounter(number) {
     return number.toString().padStart(6, '0');
@@ -40,7 +49,6 @@ function breakWindow(number) {
 }
 
 function addListenerHitbox() {
-    playSound(26, "repeat", .5);
     state.view.windows.forEach((window)=>{
         window.addEventListener("mousedown", () =>{
             if (state.values.lastClick !== window) {
