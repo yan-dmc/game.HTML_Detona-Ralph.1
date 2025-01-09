@@ -156,3 +156,24 @@ body {
     from {opacity: 0; background-color: #fff;}
     to {opacity: 1; background-color: #ffffff00;}
 }
+
+
+@media (max-width: 599px) {
+    .hub {
+        font-size: 1.5vh;
+    }
+    .building {
+        transform: scaleX(2);
+    }
+
+    
+    .ralph {
+        position: absolute;
+        top: 1.5vh;
+        
+        & img {
+            height: 18.5vh;
+            user-select: none;
+        }
+    }
+}
