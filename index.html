@@ -7,16 +7,20 @@
     <!-- css -->
     <link rel="stylesheet" href="./src/styles/reset.css">
     <link rel="stylesheet" href="./src/styles/main.css">
+    <link rel="icon" type="image/x-icon" href="./src/images/hammer1.png">
 </head>
 <body>
+    <div id="mousePoint">
+        <img class="mousePoint" src="./src/images/hammer1.png" alt="Imagem">
+    </div>
     <header class="hub">
         <section class="score">
             <h2 class="color-red">1UP</h2>
-            <h2>000000</h2>
+            <h2 id="game-score">000000</h2>
         </section>
         <section class="score">
             <h2 class="color-red">HIGH SCORE</h2>
-            <h2>000000</h2>
+            <h2 id="high-score">000000</h2>
         </section>
         <section class="lives">
             <img src="./src/images/Lives.png" alt="lives">
@@ -29,37 +33,38 @@
 
             <section class="windows">
                 <div class="row1">
-                    <div class="window"><img src="./src/images/windowFixed.png" alt=""></div>
-                    <div class="window"><img src="./src/images/windowFixed.png" alt=""></div>
-                    <div class="window"><img src="./src/images/windowFixed.png" alt=""></div>
-                    <div class="window"><img src="./src/images/windowFixed.png" alt=""></div>
-                    <div class="window"><img src="./src/images/windowFixed.png" alt=""></div>
+                    <div class="window hidden"><img src="./src/images/windowFixed.png" alt=""></div>
+                    <div class="window hidden"><img src="./src/images/windowFixed.png" alt=""></div>
+                    <div class="window hidden"><img src="./src/images/windowFixed.png" alt=""></div>
+                    <div class="window hidden"><img src="./src/images/windowFixed.png" alt=""></div>
+                    <div class="window hidden"><img src="./src/images/windowFixed.png" alt=""></div>
                 </div>
     
                 <div class="row2">
-                    <div class="window"><img src="./src/images/windowFixed.png" alt=""></div>
-                    <div class="window"><img src="./src/images/windowFixed.png" alt=""></div>
-                    <div class="window"><div class="white-box">                  </div></div>
-                    <div class="window"><img src="./src/images/windowFixed.png" alt=""></div>
-                    <div class="window"><img src="./src/images/windowFixed.png" alt=""></div>
+                    <div class="window hidden"><img src="./src/images/windowFixed.png" alt=""></div>
+                    <div class="window hidden"><img src="./src/images/windowFixed.png" alt=""></div>
+                    <div class="window hidden"><div class="white-box">                  </div></div>
+                    <div class="window hidden"><img src="./src/images/windowFixed.png" alt=""></div>
+                    <div class="window hidden"><img src="./src/images/windowFixed.png" alt=""></div>
                 </div>
                 
                 <div class="row3">
-                    <div class="window"><img src="./src/images/windowFixed.png" alt=""></div>
-                    <div class="window"><img src="./src/images/windowFixed.png" alt=""></div>
-                    <div class="window"><div class="blue-box">                   </div></div>
-                    <div class="window"><img src="./src/images/windowFixed.png" alt=""></div>
-                    <div class="window"><img src="./src/images/windowFixed.png" alt=""></div>
+                    <div class="window hidden"><img src="./src/images/windowFixed.png" alt=""></div>
+                    <div class="window hidden"><img src="./src/images/windowFixed.png" alt=""></div>
+                    <div class="window hidden"><div class="blue-box">                   </div></div>
+                    <div class="window hidden"><img src="./src/images/windowFixed.png" alt=""></div>
+                    <div class="window hidden"><img src="./src/images/windowFixed.png" alt=""></div>
                 </div>
             </section>
 
             <section class="ralph">
-                <img src="./src/images/ralph.gif" alt="">
+                <img class="ralphImg" src="./src/images/ralph.gif" alt="">
             </section>
         </section>
         
     </main>
 
     <script defer src="./src/scripts/engine.js"></script>
+    <script defer src="./src/scripts/mousepoint.js"></script>
 </body>
 </html>
